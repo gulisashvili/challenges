@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="dropdown">
+        <label class="dropdown-toggler" for="dropdown-toggler">menu</label>
+        <input type="checkbox" id="dropdown-toggler" />
+      <div class="dropdown-menu">
+        <ul class="dropdown-menu-list">
+          <li class="dropdown-menu-list-item">React.js</li>
+          <li class="dropdown-menu-list-item">React Native</li>
+          <li class="dropdown-menu-list-item">Vanila Javascript</li>
+          <li class="dropdown-menu-list-item">Redux</li>
+          <li class="dropdown-menu-list-item">React Animations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var toggler = document.getElementById('dropdown-toggler')
+
+    toggler.addEventListener('click', function(e) {
+      var menu = document.querySelector('.dropdown-menu')
+
+      if (menu.classList.contains("normal")) {
+        menu.classList.remove('normal')
+        menu.classList.add('reverse')
+
+      } else {
+        menu.classList.add('normal')
+        menu.classList.remove('reverse')
+      }
+
+    })
+
+
+  </script>
+</body>
+</html>
